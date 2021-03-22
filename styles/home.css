@@ -1,1 +1,18 @@
 /* add home page styles here */
+
+input {
+    margin: 10px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+span {
+    font-weight: bold;
+}
+
+p {
+    margin: 10px 0;
+}
