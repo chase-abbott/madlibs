@@ -1,5 +1,16 @@
 /* add home page styles here */
 
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    width: 380px;
+    border-radius: 10px;
+}
+
 input {
     margin: 10px;
 }
@@ -19,4 +30,29 @@ p {
 
 .hidden {
     display: none;
+}
+
+.shrek {
+    width: 600px;
+}
+
+span {
+    font-weight: bold;
+}
+
+p {
+    font-weight: 300;
+}
+
+button {
+    background-color: #795A2D;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 15px;
+    color: #D3CCA5;
+    box-shadow: 0px 2px 0px #523213;
+}
+
+button:focus {
+    outline: 0;
 }
