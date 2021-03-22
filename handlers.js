@@ -7,7 +7,7 @@ export const inputsArray = inputsDiv.querySelectorAll('input');
 
 export const clickButton = () => {
     for (let i = 0; i < spansArray.length; i++) {
-        spansArray[i].textContent = inputsArray[i].value;
+        spansArray[i].textContent = inputsArray[i].value.toLowerCase();
     }
     inputsDiv.classList.toggle('hidden');
     storyDiv.classList.toggle('hidden');
