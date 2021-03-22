@@ -1,7 +1,6 @@
 // import functions and grab DOM elements
-import {spansArray, inputsArray, clickButton} from "./handlers.js";
+import {spansArray, inputsArray, clickButton, btnSubmit} from "./handlers.js";
 
-const btnSubmit = document.getElementById("button-submit");
 
 // initialize state
 
