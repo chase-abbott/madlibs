@@ -22,7 +22,7 @@ export const populateTwo = () => {
     for (let i = 0; i < spansArray2.length; i++) {
         inputsArray[i].placeholder = spansArray2[i].textContent;
     }
-}
+};
 
 export const clickButton = () => {
     let empty = false;
