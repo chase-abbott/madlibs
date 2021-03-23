@@ -18,7 +18,7 @@ export const clickButton = () => {
     }
 
     if (!empty) {
-        warningText.classList.add('hidden')
+        warningText.classList.add('hidden');
 
         inputsDiv.classList.toggle('hidden');
         storyDiv.classList.toggle('hidden');
@@ -26,6 +26,6 @@ export const clickButton = () => {
     
         btnSubmit.textContent = (btnSubmit.textContent === 'Submit') ? 'Play Again!' : 'Submit';
     } else {
-        warningText.classList.remove('hidden')
+        warningText.classList.remove('hidden');
     }
 };
