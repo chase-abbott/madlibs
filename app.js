@@ -1,15 +1,16 @@
 // import functions and grab DOM elements
-import { spansArray, inputsArray, clickButton, btnSubmit } from './handlers.js';
+import { clickButton, btnSubmit, btnRadio1, btnRadio2, populateOne, populateTwo } from './handlers.js';
+
 
 
 // initialize state
-const init = () => {
-    for (let i = 0; i < spansArray.length; i++) {
-        inputsArray[i].placeholder = spansArray[i].textContent;
-    }
-};
 
-// set event listeners to update state and DOM
+
+
+btnRadio1.onclick = populateOne;
+btnRadio2.onclick = populateTwo;
+
+
 btnSubmit.addEventListener('click', clickButton);
 
-document.onload = init();
+document.onload = populateOne();
