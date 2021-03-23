@@ -9,6 +9,7 @@ const spansArray2 = story2Div.querySelectorAll('span');
 export const btnSubmit = document.getElementById('button-submit');
 const spansArray = storyDiv.querySelectorAll('span');
 const inputsArray = inputsDiv.querySelectorAll('input');
+const storySelect = document.getElementById('story-select');
 
 
 export const populateOne = () => {
@@ -21,7 +22,7 @@ export const populateTwo = () => {
     for (let i = 0; i < spansArray2.length; i++) {
         inputsArray[i].placeholder = spansArray2[i].textContent;
     }
-}
+};
 
 export const clickButton = () => {
     let empty = false;
@@ -47,13 +48,22 @@ export const clickButton = () => {
     }
 
     if (!empty) {
-        
+        storySelect.classList.toggle('hidden');
         warningText.classList.add('hidden');
         inputsDiv.classList.toggle('hidden');
-        story.classList.remove('hidden');
-        story2.classList.add('hidden');
         shrek.classList.toggle('hidden');
-        btnSubmit.textContent = (btnSubmit.textContent === 'Submit') ? 'Play Again!' : 'Submit';
+        if (btnSubmit.textContent === 'Submit') {
+            btnSubmit.textContent = 'Play Again!';
+            story.classList.remove('hidden');
+            story2.classList.add('hidden');
+        } else {
+            btnSubmit.textContent = 'Submit';
+            story.classList.add('hidden');
+            story2.classList.add('hidden');
+            for (let i = 0; i < spans.length; i++) {
+                inputsArray[i].value = '';
+            }
+        }
     } else {
         warningText.classList.remove('hidden');
     }
