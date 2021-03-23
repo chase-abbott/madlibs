@@ -1,16 +1,28 @@
 // import functions and grab DOM elements
-import { clickButton, btnSubmit, btnRadio1, btnRadio2, populateOne, populateTwo } from './handlers.js';
+import { clickButton, btnSubmit, populateInputs, storyDivs, storySelect } from './handlers.js';
 
-
-
-// initialize state
-
-
-
-btnRadio1.onclick = populateOne;
-btnRadio2.onclick = populateTwo;
-
-
+// add event handlers
 btnSubmit.addEventListener('click', clickButton);
 
-document.onload = populateOne();
+// initialize stuff
+window.onload = () => {
+    storySelect.innerHTML = '';
+    for (let i = 0; i < storyDivs.length; i++) {
+        const radElem = document.createElement('input');
+        const labElem = document.createElement('label');
+
+        radElem.name = 'story-select';
+        radElem.type = 'radio';
+        radElem.value = '' + (i + 1);
+        radElem.onclick = populateInputs;
+
+        labElem.for = radElem.value;
+        labElem.textContent = 'story ' + (i + 1);
+
+        storySelect.appendChild(radElem);
+        storySelect.appendChild(labElem);
+    }
+    storySelect.firstChild.checked = true;
+
+    populateInputs();
+};
