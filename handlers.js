@@ -26,10 +26,8 @@ export const populateInputs = () => {
 };
 
 export const clickButton = () => {
-    let story = document.getElementById('story-' + getSelectedRadio());
-    let story2 = null;
     let empty = false;
-
+    const story = document.getElementById('story-' + getSelectedRadio());
     const spans = story.querySelectorAll('span');
 
     // loop through buttons and populate the spans
