@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/home.css">
     <title>Ogre Madlib</title>
+    <script type="module" src="app.js" defer></script>
 </head>
 
 <body>
@@ -20,6 +21,7 @@
             <img src="assets/big-logo.png"/>
         </div>
     </header>
+
     <main>
         <section class="main-section">
             <h2>
@@ -27,27 +29,19 @@
             </h2>
 
             <fieldset id="story-select">
-                <input name="story-select" type="radio" id="radio-1" checked value="1"> <label for="1">story 1</label>
-                <input name="story-select" type="radio" id="radio-2" value="2"> <label for="2">story 2</label>
+                <input name="story-select" type="radio" value="1" checked>
+                <label for="1">story 1</label>
+
+                <input name="story-select" type="radio" value="2">
+                <label for="2">story 2</label>
             </fieldset>
 
-            <div class="inputs toggle" id="inputs">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-            </div>
+            <fieldset class="inputs toggle" id="inputs">
+            </fieldset>
+
             <img src="./assets/shrek.png" class="hidden toggle shrek" id="shrek">
-            <div class="story toggle hidden" id="story">
+
+            <div class="story toggle hidden" id="story-1">
                 <p>Somebody once told me the world is gonna <span>Verb</span> me</p>
                 <p>I ain't the sharpest <span>Noun</span> in the shed</p>
                 <p>She was looking kind of dumb with her <span>Noun</span> and her thumb</p>
@@ -67,7 +61,7 @@
                 <p>I need to get myself away from this <span>Noun</span></p>
                 <p>I said, "<span>Expression</span>" what a concept</p>
                 <p>I could use a little <span>Noun</span> myself</p>
-                <p>And we could all use a little change</p>
+                <p>And we could all use a <span>Adjective</span>> change</p>
                 <br />
                 <p>Well the <span>Plural Noun</span> start coming and they don't stop coming</p>
                 <p>Fed to the rules and I hit the ground <span>Verb Ending In -ing</span></p>
@@ -78,15 +72,21 @@
                 <p>You'll never <span>Verb</span> if you don't go</p>
                 <p>You'll never <span>Verb</span> if you don't glow</p>
             </div>
+            <div class="story toggle hidden" id="story-3">
+                <p>test test test <span>Test1</span></p>
+                <p>test test test <span>Test2</span></p>
+                <p>test test test <span>Test3</span></p>
+            </div>
+
             <button id="button-submit">Submit</button>
+
             <span class="hidden" id="warning">Please fill out every word!</span>
         </section>
     </main>
-    <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
-    </footer>
 
-    <script type="module" src="app.js"></script>
+    <footer>
+        <div class="copy gutter-right">&#x1f12f; 2020 Alchemy Code Lab</div>
+    </footer>
 </body>
 
 </html>
