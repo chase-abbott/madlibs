@@ -13,11 +13,11 @@ window.onload = () => {
 
         radElem.name = 'story-select';
         radElem.type = 'radio';
-        radElem.value = '' + (i+1);
+        radElem.value = '' + (i + 1);
         radElem.onclick = populateInputs;
 
         labElem.for = radElem.value;
-        labElem.textContent = 'story ' + (i+1);
+        labElem.textContent = 'story ' + (i + 1);
 
         storySelect.appendChild(radElem);
         storySelect.appendChild(labElem);
@@ -25,4 +25,4 @@ window.onload = () => {
     storySelect.firstChild.checked = true;
 
     populateInputs();
-}
+};
